@@ -12,11 +12,22 @@ const Search = ({onSearchChange}) => {
     }
     
     const loadOptions = (inputValue) => {
-        return fetch ('${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}', geoAPIOptions)
-        .then ((response) => response.json())
-        .then((response) => console.log(response))
-        .catch((err) => console.error(err));
-    }
+        return fetch(
+          `${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`,
+          geoAPIOptions
+        )
+        .then((response) => response.json())
+        .then((response) => {
+            return {
+              options: response.data.map((city) => {
+                return {
+                  value: `${city.latitude} ${city.longitude}`,
+                  label: `${city.name}, ${city.countryCode}`,
+                };
+              }),
+            };
+        });
+    };
 
     return (
         <AsyncPaginate 
