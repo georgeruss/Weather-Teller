@@ -6,9 +6,17 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <div id="clouds">
+    <h1 class="container"></h1>
+    <React.StrictMode>
     <App />
   </React.StrictMode>
+    	<div class="cloud x3"></div>
+      <div class="cloud x2"></div>
+      <div class="cloud x4"></div>
+      <div class="cloud x5"></div>
+      <div class="cloud x1"></div>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

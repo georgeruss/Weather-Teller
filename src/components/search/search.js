@@ -1,15 +1,11 @@
 import { AsyncPaginate } from "react-select-async-paginate";
 import { useState } from "react";
 import { GEO_API_URL, geoAPIOptions } from "../../api";
+import "./search.css";
 
 const Search = ({onSearchChange}) => {
     
     const [search, setSearch] = useState(null);
-    
-    const handleOnChange = (searchData) => {
-        setSearch(searchData);
-        onSearchChange(searchData);
-    }
     
     const loadOptions = (inputValue) => {
         return fetch(
@@ -29,7 +25,13 @@ const Search = ({onSearchChange}) => {
         });
     };
 
+    const handleOnChange = (searchData) => {
+      setSearch(searchData);
+      onSearchChange(searchData);
+    };
+
     return (
+      <div className="search">
         <AsyncPaginate 
             placeholder="Search for your City's Weather..."
             debounceTimeout={600}
@@ -37,8 +39,8 @@ const Search = ({onSearchChange}) => {
             onChange={handleOnChange}
             loadOptions={loadOptions}
         />
+        </div>
     )
-
 }
 
 export default Search;
