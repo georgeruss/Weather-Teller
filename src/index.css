@@ -4,20 +4,13 @@ code {
 }
 
 body {
-  font-family: "Roboto", Arial ip !important;
+ /* font-family: "Roboto", Arial ip !important;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(-45deg, #e5c684, #cb5f73, #4ba7c8, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 12s ease infinite;
   height: 100vh;
-}
-
-.title {
-  font-family: "Roboto", Arial;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
 }
 
 @keyframes gradient {
@@ -36,7 +29,7 @@ body {
 
 /*The container will also serve as the SKY*/
 
-*{ margin: 0; padding: 0;}
+*{ margin: 0; padding: 2;}
 
 body {
 	/*To hide the horizontal scroller appearing during the animation*/

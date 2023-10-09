@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './title.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div id="clouds">
-    <h1 class="title">Weather App</h1>
+  <div class="box">
+  <div>
+    <div class="title-wrapper">
+      <h1 class="sweet-title">
+        <span data-text="George's">George's</span>
+        <span data-text="Weather">Weather</span>
+        <span data-text="Teller">Teller</span>
+      </h1>
+    </div>
+  </div>
+
     <React.StrictMode>
     <App />
   </React.StrictMode>
