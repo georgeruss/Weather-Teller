@@ -13,6 +13,13 @@ body {
   height: 100vh;
 }
 
+.title {
+  font-family: "Roboto", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
