@@ -2,6 +2,8 @@ import { AsyncPaginate } from "react-select-async-paginate";
 import { useState } from "react";
 import { GEO_API_URL, geoAPIOptions } from "../../api";
 import "./search.css";
+import { ControlProps } from "chakra-react-select";
+//import {options as apiOptions, api_url} from "../../api/api.js";
 
 const Search = ({onSearchChange}) => {
     
@@ -30,16 +32,30 @@ const Search = ({onSearchChange}) => {
       onSearchChange(searchData);
     };
 
+    const customStyles = {
+      control: (provided, state) => ({
+          ...provided,
+          borderRadius: '5px',
+          border: '2px solid #ccc',
+          boxShadow: state.isFocused ? '0 0 0 2px #3699FF' : null,
+      }),
+      option: (provided, state) => ({
+          ...provided,
+          backgroundColor: state.isFocused ? '#3699FF' : null,
+          color: state.isFocused ? 'white' : null,
+      }),
+    }    
+
     return (
-      <div className="search-box">
-      <button class="btn-search"><i class="fas fa-search"></i></button>
-            <AsyncPaginate 
-            placeholder="Search for your City's Weather..."
-            debounceTimeout={600}
-            value={search}
-            onChange={handleOnChange}
-            loadOptions={loadOptions}
-        />
+      <div class ="search">
+          <AsyncPaginate 
+              styles={customStyles}
+              placeholder="Search for your City's Weather..."
+              debounceTimeout={1000}
+              value={search}
+              onChange={handleOnChange}
+              loadOptions={loadOptions}
+          />
         </div>
     )
 }
