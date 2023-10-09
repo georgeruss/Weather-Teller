@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div class="box">
-  <div>
+  <div class="">
     <div class="title-wrapper">
       <h1 class="sweet-title">
         <span data-text="George's">George's</span>

@@ -19,6 +19,7 @@ body {
   align-items: center;
   justify-content: center;
   transform: skew(0, -10deg);
+  padding: 5%;
 }
 
 .top-title {

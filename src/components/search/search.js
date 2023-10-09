@@ -31,8 +31,9 @@ const Search = ({onSearchChange}) => {
     };
 
     return (
-      <div className="search">
-        <AsyncPaginate 
+      <div className="search-box">
+      <button class="btn-search"><i class="fas fa-search"></i></button>
+            <AsyncPaginate 
             placeholder="Search for your City's Weather..."
             debounceTimeout={600}
             value={search}
