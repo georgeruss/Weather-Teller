@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(-45deg, #e5c684, #cb5f73, #4ba7c8, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient 12s ease infinite;
+  animation: gradient 10s ease infinite;
   height: 100vh;
 }
 
@@ -54,15 +54,16 @@ body {
 	-webkit-border-radius: 200px;
 	
 	position: relative; 
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;	
 }
 
 .cloud:before, .cloud:after {
 	content: '';
 	position: absolute; 
 	background: #fff;
+
 	width: 100px; height: 80px;
 	position: absolute; top: -15px; left: 10px;
-	
 	border-radius: 100px;
 	-moz-border-radius: 100px;
 	-webkit-border-radius: 100px;
@@ -79,25 +80,30 @@ body {
 
 /*Time to animate*/
 .x1 {
-	-webkit-animation: moveclouds 10s linear infinite;
-	-moz-animation: moveclouds 8s linear infinite;
-	-o-animation: moveclouds 15s linear infinite;
+	left: -50px;
+	top: 10px;
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	-webkit-animation: moveclouds 1s linear infinite;
+	-moz-animation: moveclouds 1s linear infinite;
+	-o-animation: moveclouds 1s linear infinite;
 }
 
 /*variable speed, opacity, and position of clouds for realistic effect*/
 .x2 {
 	left: 200px;
-	
+	top: 40px;	
 	-webkit-transform: scale(0.6);
 	-moz-transform: scale(0.6);
 	transform: scale(0.6);
-	opacity: 0.6; /*opacity proportional to the size*/
+	opacity: 1; /*opacity proportional to the size*/
 	
 	/*Speed will also be proportional to the size and opacity*/
 	/*More the speed. Less the time in 's' = seconds*/
-	-webkit-animation: moveclouds 25s linear infinite;
-	-moz-animation: moveclouds 25s linear infinite;
-	-o-animation: moveclouds 25s linear infinite;
+	-webkit-animation: moveclouds 15s linear infinite;
+	-moz-animation: moveclouds 5s linear infinite;
+	-o-animation: moveclouds 5s linear infinite;
 }
 
 .x3 {
@@ -108,26 +114,26 @@ body {
 	transform: scale(0.8);
 	opacity: 0.8; /*opacity proportional to the size*/
 	
-	-webkit-animation: moveclouds 20s linear infinite;
-	-moz-animation: moveclouds 20s linear infinite;
-	-o-animation: moveclouds 20s linear infinite;
+	-webkit-animation: moveclouds 2s linear infinite;
+	-moz-animation: moveclouds 2s linear infinite;
+	-o-animation: moveclouds 2s linear infinite;
 }
 
 .x4 {
-	left: 470px; top: -250px;
+	left: 470px; top: -260px;
 	
 	-webkit-transform: scale(0.75);
 	-moz-transform: scale(0.75);
 	transform: scale(0.75);
 	opacity: 0.75; /*opacity proportional to the size*/
 	
-	-webkit-animation: moveclouds 18s linear infinite;
-	-moz-animation: moveclouds 18s linear infinite;
-	-o-animation: moveclouds 18s linear infinite;
+	-webkit-animation: moveclouds 8s linear infinite;
+	-moz-animation: moveclouds 8s linear infinite;
+	-o-animation: moveclouds 8s linear infinite;
 }
 
 .x5 {
-	left: -150px; top: -150px;
+	left: -10px; top: -350px;
 	
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
@@ -137,6 +143,19 @@ body {
 	-webkit-animation: moveclouds 20s linear infinite;
 	-moz-animation: moveclouds 20s linear infinite;
 	-o-animation: moveclouds 20s linear infinite;
+}
+
+.x6 {
+	left: 425px; top: -150px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 2s linear infinite;
+	-moz-animation: moveclouds 2s linear infinite;
+	-o-animation: moveclouds 2s linear infinite;
 }
 
 @-webkit-keyframes moveclouds {

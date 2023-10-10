@@ -1,31 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import './title.css';
+import './styles/index.css';
+import './styles/title.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <div class="box">
-  <div class="">
+    
     <div class="title-wrapper">
-      <h1 class="sweet-title">
-        <span data-text="George's">George's</span>
+    <div className='x1 cloud'></div> 
+ 
+      <h1 class="sweet-title"> 
+      
         <span data-text="Weather">Weather</span>
+        
         <span data-text="Teller">Teller</span>
+        <div className='x2 cloud'></div>
       </h1>
+      
     </div>
-  </div>
 
     <React.StrictMode>
     <App />
   </React.StrictMode>
-    	<div class="cloud x3"></div>
-      <div class="cloud x2"></div>
-      <div class="cloud x4"></div>
-      <div class="cloud x5"></div>
-      <div class="cloud x1"></div>
   </div>
 );
 

@@ -36,8 +36,8 @@ const Search = ({onSearchChange}) => {
       control: (provided, state) => ({
           ...provided,
           borderRadius: '5px',
-          border: '2px solid #ccc',
-          boxShadow: state.isFocused ? '0 0 0 2px #3699FF' : null,
+            border: '3px solid #ccc',
+            boxShadow: state.isFocused ? '0 0 0 2px #3699FF' : null,
       }),
       option: (provided, state) => ({
           ...provided,
@@ -47,14 +47,14 @@ const Search = ({onSearchChange}) => {
     }    
 
     return (
-      <div class ="search">
+      <div className ={"search"}>
           <AsyncPaginate 
-              styles={customStyles}
               placeholder="Search for your City's Weather..."
               debounceTimeout={1000}
               value={search}
               onChange={handleOnChange}
               loadOptions={loadOptions}
+              styles={customStyles}
           />
         </div>
     )

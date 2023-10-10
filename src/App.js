@@ -1,14 +1,17 @@
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
 import Search from './components/search/search';
 import CurrentWeather from './components/current-weather/current-weather';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
 import { useState } from 'react';
 import Forecast from "./components/forecast/forecast";
-
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route }
+    from 'react-router-dom';
+import Home from './pages/home';
+import About from './pages/about';
 
 function App() {
-
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
 
