@@ -36,8 +36,8 @@ const Search = ({onSearchChange}) => {
       control: (provided, state) => ({
           ...provided,
           borderRadius: '5px',
-            border: '3px solid #ccc',
-            boxShadow: state.isFocused ? '0 0 0 2px #3699FF' : null,
+            border: '5px solid #ccf',
+            boxShadow: state.isFocused ? '0 0 0 5px #3699FF' : null,
       }),
       option: (provided, state) => ({
           ...provided,

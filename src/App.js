@@ -6,10 +6,12 @@ import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
 import { useState } from 'react';
 import Forecast from "./components/forecast/forecast";
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route }
-    from 'react-router-dom';
-import Home from './pages/home';
-import About from './pages/about';
+import { BrowserRouter as Router, Switch, 
+  Route, Redirect, useNavigate, Routes} from "react-router-dom";
+import Home from "./pages/home";
+import About from "./pages/about";
+import './styles/title.css';
+
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -34,12 +36,25 @@ function App() {
     })
     .catch(console.log);
   };
-
+  
+  const navigate = useNavigate();
+  const navigateTo = () => navigate.push('/home');
+  
   console.log(currentWeather);
   console.log(forecast);
 
   return (
     <div className="container">
+      <div className="container">
+      <button onClick={() => navigate.push('/home')} />
+      <button onClick={() => navigate.push('/about')} />
+      
+      <Routes>
+        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/about" element={<About/>}/>
+      </Routes>
+      </div>
+      
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecast && <Forecast data={forecast} />}

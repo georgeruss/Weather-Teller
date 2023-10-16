@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700;900&display=swap");
 
 body {   
-  font-family: "Exo 2", sans-serif;
-  
+  font-family: "Exo 2", sans-serif;  
 }
 
 .header {
@@ -55,7 +54,7 @@ body {
     3px 3px 1px #165bfb, 5px 3px 4px black, 4px 4px 1px #165bfb,
     6px 4px 1px #4af7ff, 5px 5px 010px black, 7px 5px 1px #4af7ff,
     6px 6px 10px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb,
-    9px 7px 1px #4af7ff;
+    9px 8px 2px black, 1px 2px 10px #84c3e5;
     span {
     display: block;
     position: relative;
@@ -75,7 +74,23 @@ body {
 
     &:nth-child(2) {
       padding-left: 2.25rem;
-    }
-    
+    } 
+  }  
+}
+
+.sweet-text {
+  font-family: "Exo 2", sans-serif;  
+  order: 2;
+  color: #fde9ff;
+  font-weight: 600;
+  text-transform:inherit;
+  font-size: clamp(2rem, 4vw, 5rem);
+  /*line-height: 0.75em;*/
+  text-align:left;
+  text-shadow: 1px 2px 5px #e5c684, 2px 2px 3px #165bfb, 2px 2px 1px #4af7ff, 5px 3px 4px black;
+    span {
+    display: block;
+    position: relative;   
   }
+  
 }

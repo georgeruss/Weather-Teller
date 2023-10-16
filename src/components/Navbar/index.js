@@ -4,7 +4,6 @@ import { Nav, NavLink, NavMenu }
     
 const Navbar = () => {
     return (
-        <>
             <Nav>
                 <NavMenu>
                     <NavLink to="./home" activeStyle>
@@ -15,7 +14,6 @@ const Navbar = () => {
                     </NavLink>
                 </NavMenu>
             </Nav>
-        </>
     );
 };
  

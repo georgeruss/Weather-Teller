@@ -4,28 +4,30 @@ import './styles/index.css';
 import './styles/title.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './styles/rain.css'
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <div class="box">
-    
     <div class="title-wrapper">
     <div className='x1 cloud'></div> 
  
       <h1 class="sweet-title"> 
       
         <span data-text="Weather">Weather</span>
-        
         <span data-text="Teller">Teller</span>
-        <div className='x2 cloud'></div>
+        
       </h1>
       
     </div>
-
+  <BrowserRouter>
     <React.StrictMode>
     <App />
   </React.StrictMode>
+  <div className='container'></div>
+  </BrowserRouter>
   </div>
 );
 
