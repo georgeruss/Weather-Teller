@@ -7,14 +7,6 @@ const About = () => {
                 About
             </h1>
             <ul> 
-        <li> 
-          {/* Endpoint to route to Home component */} 
-          <Link to="/">Home</Link> 
-        </li> 
-        <li> 
-          {/* Endpoint to route to About component */} 
-          <Link to="/about">About</Link> 
-        </li> 
       </ul> 
         </div>
     );

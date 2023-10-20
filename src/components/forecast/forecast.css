@@ -21,6 +21,7 @@ body {
     display: flex;
     font-size: 14px;
     padding: 5px 20px;
+    box-shadow: 10px 0px 20px 4px rgba(0, 0, 0, 0.3);
   }
   
   .icon-small {
@@ -43,7 +44,7 @@ body {
   }
   
   .min-max {
-    color: #757575;
+    color: #525252;
   }
   
   .daily-details-grid {
@@ -51,12 +52,16 @@ body {
     grid-row-gap: 0;
     grid-column-gap: 15px;
     -webkit-column-gap: 15px;
-    column-gap: 15px;
-    display: grid;
+    column-gap: 10px;
+    display:flexbox;
     flex: 1 1;
+    border-radius: 15px;
+    height: 180px;
+    margin: 5px;
     grid-template-columns: auto auto;
-    padding: 5px 15px;
+    padding: 2px 20px;
     row-gap: 0;
+    box-shadow: 10px 0px 20px 4px rgba(0, 0, 0, 0.3);
   }
   
   .daily-details-grid-item {

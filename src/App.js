@@ -48,13 +48,14 @@ function App() {
       <div className="container">
       <button onClick={() => navigate.push('/home')} />
       <button onClick={() => navigate.push('/about')} />
-      
-      <Routes>
-        <Route exact path="/" element={<Home/>}/>
-        <Route exact path="/about" element={<About/>}/>
-      </Routes>
+      <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+            </Routes>
+      </Router>
       </div>
-      
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecast && <Forecast data={forecast} />}

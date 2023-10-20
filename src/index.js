@@ -6,6 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './styles/rain.css'
 import { BrowserRouter } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -22,12 +23,10 @@ root.render(
       </h1>
       
     </div>
-  <BrowserRouter>
     <React.StrictMode>
     <App />
   </React.StrictMode>
   <div className='container'></div>
-  </BrowserRouter>
   </div>
 );
 
